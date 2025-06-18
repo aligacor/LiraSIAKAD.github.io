@@ -1,0 +1,92 @@
+body {
+  background: #2b3f77;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  text-align: center;
+}
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: brightness(0) invert(1); /* Make white if using black PNG icons */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  color: white;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left, .right {
+  width: 48%;
+  text-align: left;
+}
+
+.edit-link {
+  font-size: 12px;
+  color: #2b3f77;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #21356b;
+  transition : opacity 3.5s, visibility 3.5s;
+}
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #ddd;
+  border-top-color:#31588f ;
+  border-radius: 50%;
+  animation: loading 3.5s ease infinite;
+}
+
+@keyframes loading {
+  from{
+    transform: rotate(0turn) ;
+  }
+  to{
+    transform: rotate(1turn);
+  }
+}

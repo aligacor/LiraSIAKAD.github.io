@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+  <link rel="stylesheet" href="login.css" />
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #21356b;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+
+  <script>
+    // Get the redirect target from URL
+    const params = new URLSearchParams(window.location.search);
+    const redirectTo = params.get("to");
+
+    // Wait for loader animation then redirect
+    setTimeout(() => {
+      if (redirectTo) {
+        window.location.href = redirectTo;
+      }
+    }, 2000); // Show loader for 2 seconds
+  </script>
+</body>
+</html>

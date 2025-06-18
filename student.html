@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMK Hang Tuah 1 Jakarta - Home</title>
+  <link rel="stylesheet" href="student.css" />
+</head>
+<body>
+  <div class="loader"></div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="asset/back.png" alt="Back" class="nav-icon" onclick="history.back()" />
+      <img src="asset/home.png" alt="Home" class="nav-icon" onclick="window.location.href='index.html'" />
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#top">Beranda</a></li>
+      <li><a href="#prestasi">Pengumuman</a></li>
+      <li><a href="#jadwal">Jadwal</a></li>
+      <li><a href="#nilai">Nilai Rapot</a></li>
+      <li><a href="admin.html">admin</a></li>
+      <li><a href="student.html">student</a></li>
+      <li><a href="teacher.html">teacher</a></li>
+      <li><a href="index.html">balik home</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="profile.php" class="signin">Profile <span class="user-icon">👤</span></a>
+      
+    </div>
+  </nav>
+
+  <!-- Hero with background image -->
+  <section class="hero" id="top">
+    <div class="overlay">
+      <div class="logo-container">
+        <img src="asset/tutwuri.png" class="logo" />
+        <img src="asset/ht1.png" class="logo" />
+        <img src="asset/osis.png" class="logo" />
+      </div>
+      <h1>SMK Hang Tuah 1 Jakarta</h1>
+      <p class="subtitle">Centre of Excellence</p>
+      <p class="carousel-caption">Kegiatan Pengesahan Teaching Factory (TEFA) Akuntansi Bank Mini By Bank DKI</p>
+    </div>
+  </section>
+
+  <!-- Prestasi section -->
+  <section class="prestasi" id="prestasi">
+    <h2>Pengumuman</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="asset/nts.png" alt="Prestasi 1" />
+        <p>Asesmen akhir semester <br> <br> <br>
+            20/9/2026</p>
+      </div>
+      <div class="card">
+        <img src="asset/rapatortu.png" alt="Prestasi 2" />
+        <p>Rapat orang tua murid <br>( Membahas PKL ) <br> <br> 30/8/2028</p>
+      </div>
+      <div class="card">
+        <img src="asset/cuti.png" alt="Prestasi 3" />
+        <p>Cuti bersama <br>( Memperingati Idul Adha ) <br> <br>6/6/2025</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule & Grades Section -->
+<section class="schedule-nilai" id="jadwal">
+  <!-- Background image wrapper -->
+  <div class="schedule-wrapper">
+    <div class="schedule-card">
+      <h3>Jadwal Murid</h3>
+      <select class="day-select">
+        <option selected>Senin</option>
+        <option >Selasa</option>
+        <option>Rabu</option>
+        <option>Kamis</option>
+        <option>Jumat</option>
+      </select>
+      <ul class="lesson-list">
+        <li><span class="lesson">PKK</span> <span class="time">7.30–9.15</span></li>
+        <li><span class="lesson">MPP RPL</span> <span class="time">7.30–9.15</span></li>
+        <li><span class="lesson">B.INDO</span> <span class="time">7.30–9.15</span></li>
+        <li><span class="lesson">KBH</span> <span class="time">7.30–9.15</span></li>
+      </ul>
+    </div>
+
+    
+  </div>
+</section>
+
+
+    <section class="nilai-recap" id="nilai">
+    <!-- Grades recap -->
+  <div class="nilai-section">
+    <h2>Rekap Nilai Siswa</h2>
+    <select class="class-select">
+        <!--
+      <option>XI AKL 1</option>
+      <option selected>XI AKL 2</option> -->
+      <option>XI RPL</option>
+    </select>
+
+    <div class="nilai-card">
+      <div class="nilai-header">
+        <img src="asset/tutwuri.png" class="logo-small" />
+        <img src="asset/ht1.png" class="logo-small" />
+        <img src="asset/osis.png" class="logo-small" />
+        <h3>SMK Hang Tuah 1 Jakarta</h3>
+        <p>Centre of excellence</p>
+      </div>
+
+
+      
+      <table class="nilai-table">
+        <thead>
+          <tr>
+            <th>Nama Siswa</th><th>Tugas 1</th><th>Tugas 2</th><th>Tugas 3</th><th>Rata-rata</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+            <!--
+          <tr><td>Andi</td><td>90</td><td>91</td><td>89</td><td>90</td></tr>
+          <tr><td>Samuel</td><td>80</td><td>80</td><td>80</td><td>80</td></tr>
+          <tr><td>Akmal</td><td>85</td><td>87</td><td>90</td><td>87</td></tr>
+          <tr><td>Udin</td><td>88</td><td>90</td><td>91</td><td>89</td></tr>
+           add more rows as needed -->
+        </tbody>
+      </table>
+
+
+
+      <div class="wali">Wali Kelas : Dede mulyana S.KOM</div>
+    </div>
+    <!--
+    <div class="button-row">
+        <a href="create.html">
+            <button class="download-btn">+ Tambah Nilai</button>
+        </a>
+    </div> -->
+  </div>
+</section>
+
+
+<script>
+     window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+
+      loader.classList.add("loader-hidden");
+
+      loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+      })
+    })
+  // Smooth scroll for internal nav links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
+
+    document.querySelector('.class-select').addEventListener('change', function() {
+    const selectedClass = this.value;
+
+    fetch('fetch_grades_student.php?class=' + selectedClass)
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('.nilai-table tbody').innerHTML = data;
+        });
+});
+
+// Initial load
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.class-select').dispatchEvent(new Event('change'));
+});
+</script>
+
+</body>
+</html>

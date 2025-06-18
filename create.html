@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="create.css">
+<body>
+<div class="navbar">
+        <a href="javascript:history.back()">
+        <img src="asset/back.png" alt="Back" />
+        </a>
+        <a href="index.html">
+        <img src="asset/home.png" alt="Home" />
+        </a>
+    </div>
+  <div class="container">
+    <div class="logo-container">
+        <img src="asset/tutwuri.png" alt="Logo 1">
+        <img src="asset/ht1.png" alt="Logo 2">
+        <img src="asset/osis.png" alt="Logo 3">
+    </div>
+    <h1>SMK Hang Tuah 1 Jakarta</h1>
+    <p>Centre of Excellence</p>
+    </div>
+    <div class="form-tambah">
+      <h1>INSERT DATA</h1>
+<form action="insert.php" method="POST">
+  <input type="text" name="name" placeholder="Nama Siswa" required>
+  <input type="number" name="tugas1" placeholder="Tugas 1" required>
+  <input type="number" name="tugas2" placeholder="Tugas 2" required>
+  <input type="number" name="tugas3" placeholder="Tugas 3" required>
+  <select name="class" required>
+    <option>XI AKL 1</option>
+    <option>XI AKL 2</option>
+    <option>XI RPL</option>
+  </select>
+  <button type="submit">Tambah Data</button>
+</form>
+</div>
+<script>
+  window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+
+      loader.classList.add("loader-hidden");
+
+      loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+      })
+    })
+</script>
+</body>

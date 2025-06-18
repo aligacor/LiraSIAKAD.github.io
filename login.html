@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | SMK Hang Tuah 1 Jakarta</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+   <div class="loader"></div>
+    <div class="navbar">
+        <a href="javascript:history.back()">
+        <img src="asset/back.png" alt="Back" />
+        </a>
+        <a href="index.html">
+        <img src="asset/home.png" alt="Home" />
+        </a>
+    </div>
+  <div class="container">
+    <div class="logo-container">
+        <img src="asset/tutwuri.png" alt="Logo 1">
+        <img src="asset/ht1.png" alt="Logo 2">
+        <img src="asset/osis.png" alt="Logo 3">
+    </div>
+    <h1>SMK Hang Tuah 1 Jakarta</h1>
+    <p>Centre of Excellence</p>
+    <div class="login-box">
+  <h2>Sign In</h2>
+  <form id="loginForm" action="login.php" method="POST">
+    <!-- Name field -->
+    <input type="text" placeholder="Nama..." name="name" id="name" required />
+
+    <!-- Password field -->
+    <input type="password" placeholder="Password..." name="password" id="password" required />
+
+    <!-- Role select -->
+    <select name="role" id="role" required>
+      <option value="">Roles</option>
+      <option value="admin">Admin</option>
+      <option value="teacher">Teacher</option>
+      <option value="student">Student</option>
+    </select>
+
+    <!-- Submit -->
+    <button type="submit">Login</button>
+  </form>
+</div>
+</div>
+<script>
+  window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+
+      loader.classList.add("loader-hidden");
+
+      loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+      })
+    })
+</script>
+  
+</body>
+</html>
